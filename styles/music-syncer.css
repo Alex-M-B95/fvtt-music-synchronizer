@@ -1,0 +1,18 @@
+.ms-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ms-circle-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.ms-circle {
+    flex: 0 0 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
