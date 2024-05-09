@@ -27,8 +27,8 @@
   "styles": [
     "styles/music-syncer.css"
   ],
-  "version": "0.0.1",
-  "download": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/archive/refs/tags/0.0.1.zip",
+  "version": "0.0.2",
+  "download": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/archive/refs/tags/0.0.2.zip",
   "url": "https://github.com/Alex-M-B95/fvtt-music-synchronizer",
   "bugs": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/issues",
   "manifest": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/raw/main/module.json"

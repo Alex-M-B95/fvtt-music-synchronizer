@@ -1,8 +1,8 @@
 {{#*inline "soundPartial"}}
 <li class="sound flexrow {{ sound.css }}" data-playlist-id="{{ sound.playlistId }}" data-sound-id="{{ sound._id }}">
 
-    {{#if sound.flags.music-syncer.syncable }}
-    <span class="ms-circle" style="background-color: {{ sound.flags.music-syncer.ui-indicator-color }}"></span>
+    {{#if sound.flags.alexs-music-syncer.syncable }}
+    <span class="ms-circle" style="background-color: {{ sound.flags.alexs-music-syncer.ui-indicator-color }}"></span>
     {{ else }}
     <span class="ms-circle" style="background-color: #ffffff00"></span>
     {{/if}}
@@ -44,7 +44,7 @@
         </a>
     </div>
     <div class="ms-flex-container">
-        {{#each sound.flags.music-syncer.sync-users as |user|}}
+        {{#each sound.flags.alexs-music-syncer.sync-users as |user|}}
         <p class="ms-circle-text"><span class="ms-circle" style="background-color: {{ user.color }}"></span>{{user.name}}</p>
         {{/each}}
     </div>
