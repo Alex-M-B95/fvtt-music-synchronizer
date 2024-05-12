@@ -1,0 +1,10 @@
+{
+    "music-syncer": {
+        "settings-button-title": "Открыть настройки 'Music Syncer'",
+        "custom-settings-title": "Настройки Music Syncer",
+        "custom-settings-description": "TODO: [WIP] Описание",
+        "enable-sync-label": "Включить одновременное воспроизведение",
+        "enable-sync-description": "TODO: [WIP] Описание",
+        "sync-player-list-title": "Игроки для одновременного воспроизведения"
+    }
+}

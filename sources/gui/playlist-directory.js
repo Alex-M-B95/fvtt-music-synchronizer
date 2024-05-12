@@ -1,4 +1,5 @@
 import { Constants } from '../utils/constants.js'
+import { MusicSyncerCustomSettings } from './custom-settings.js'
 
 export class SyncablePlaylistDirectory extends PlaylistDirectory {
     static get defaultOptions() {
@@ -14,5 +15,10 @@ export class SyncablePlaylistDirectory extends PlaylistDirectory {
     
     activateListeners(html) {
         super.activateListeners(html)
+        html.find('.syncer-settings').click(this.#openSyncerSettings.bind(this))
+    }
+
+    #openSyncerSettings(event) {
+        MusicSyncerCustomSettings.open()
     }
 }

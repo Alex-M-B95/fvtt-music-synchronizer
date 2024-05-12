@@ -1,5 +1,6 @@
 import { Logger } from './utils/logger.js'
 import { Constants } from './utils/constants.js'
+import { ModuleSettings } from './data/module-settings.js'
 import { SyncablePlaylistDirectory } from './gui/playlist-directory.js'
 
 const SoundSyncStatus = {
@@ -110,6 +111,8 @@ function _onInit() {
     Logger.log('on init')
 //    CONFIG.debug.hooks = true
     CONFIG.ui.playlists = SyncablePlaylistDirectory
+
+    ModuleSettings.registerVttSettings()
 }
 
 function _onReady() {
@@ -170,6 +173,12 @@ function _onReady() {
     }, 'WRAPPER')
 
     libWrapper.register(Constants.moduleName, 'Sound.prototype.play', function (wrapped, ...args) {
+        if (!ModuleSettings.isEnableSync) {
+            Logger.log('[disabled sync] Playing track:', this.src)
+            updateUserSoundStatus(this.src, SoundSyncStatus.playing)
+            removeAllDuplicatedSounds(this.src)
+            return wrapped(...args)
+        }
         const userStatus = userSoundState(this.src)
         if (userStatus === SoundSyncStatus.playing) {
             Logger.log('[steps] update alredy playing track:', this.src)
@@ -313,7 +322,7 @@ function userSoundState(src) {
 }
 
 function soundState(src) {
-    const userStatuses = game.users.contents.map(function (user) {
+    const userStatuses = ModuleSettings.enabledPlayers.map(function (user) {
         const items = user.getFlag(Constants.moduleName, 'sounds') || []
         return items.filter(item => item.src === src)[0]?.status || SoundSyncStatus.none
     })

@@ -84,6 +84,11 @@
             <button class="create-folder"><i class="{{ folderIcon }}"></i> {{ localize 'FOLDER.Create'}}</button>
             {{/if}}
         </div>
+        {{#if @root.user.isGM}}
+        <div class="action-buttons flexrow">
+            <button class="syncer-settings"><i class="fas fa-cogs"></i>{{ localize 'music-syncer.settings-button-title' }}</button>
+        </div>
+        {{/if}}
         <div class="header-search flexrow">
             <a class="header-control toggle-search-mode" aria-label="{{ localize searchTooltip}}" role="button"
                data-tooltip="{{ localize searchTooltip}}"><i class="fas {{ searchIcon }}"></i></a>

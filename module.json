@@ -28,8 +28,35 @@
   "styles": [
     "styles/music-syncer.css"
   ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "ru",
+      "name": "Russian",
+      "path": "lang/ru.json"
+    }
+  ],
   "url": "https://github.com/Alex-M-B95/fvtt-music-synchronizer",
   "bugs": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/issues",
   "manifest": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/raw/main/module.json",
-  "download": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/archive/refs/tags/0.0.3.zip"
+  "download": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/archive/refs/tags/0.0.3.zip",
+  "flags": {
+    "hotReload": {
+      "extensions": [
+        "css",
+        "html",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "templates",
+        "styles/css",
+        "lang"
+      ]
+    }
+  }
 }

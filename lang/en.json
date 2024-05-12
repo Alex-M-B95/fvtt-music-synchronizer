@@ -1,0 +1,10 @@
+{
+    "music-syncer": {
+        "settings-button-title": "Open Music Syncer Settings",
+        "custom-settings-title": "Music Syncer Settings",
+        "custom-settings-description": "TODO: [WIP] description",
+        "enable-sync-label": "Enable simultaneous playback",
+        "enable-sync-description": "TODO: [WIP] description",
+        "sync-player-list-title": "List of players for simultaneous play"
+    }
+}

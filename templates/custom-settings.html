@@ -1,0 +1,14 @@
+<form>
+    <div class="enable-sync flexbox">
+        <label for="enable-syncer">{{ localize 'music-syncer.enable-sync-label' }}</label>
+        <input type="checkbox" id="enable-syncer" {{#if enableSync}}checked{{/if}}>
+    </div>
+    <hr>
+    <h4>{{ localize 'music-syncer.sync-player-list-title' }}</h4>
+    {{#each players}}
+    <div class="player-toggle-row">
+        <input type="checkbox" class="player-checkbox" id="player-{{id}}" data-player-id="{{id}}" {{#if enabled}}checked{{/if}}>
+        <label for="player-{{id}}">{{name}}</label>
+    </div>
+    {{/each}}
+</form>
