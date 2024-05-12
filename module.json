@@ -2,7 +2,7 @@
   "id": "alexs-music-syncer",
   "title": "Alex's Music Syncer",
   "description": "This module provides awesome features for Foundry VTT.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "authors": [
     {
       "name": "Alex M.",
@@ -43,20 +43,5 @@
   "url": "https://github.com/Alex-M-B95/fvtt-music-synchronizer",
   "bugs": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/issues",
   "manifest": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/raw/main/module.json",
-  "download": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/archive/refs/tags/0.0.3.zip",
-  "flags": {
-    "hotReload": {
-      "extensions": [
-        "css",
-        "html",
-        "hbs",
-        "json"
-      ],
-      "paths": [
-        "templates",
-        "styles/css",
-        "lang"
-      ]
-    }
-  }
+  "download": "https://github.com/Alex-M-B95/fvtt-music-synchronizer/archive/refs/tags/0.0.4.zip"
 }
